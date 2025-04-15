@@ -48,23 +48,19 @@ This assignment focuses on applying three meta-heuristic optimization algorithms
 
 ### B.1 Negative Log-Likelihood (NLL) Derivation
 The NLL for logistic regression is:
-\[
-\mathcal{L}\left(\beta_{0}, \beta\right) = -\sum_{i=1}^{N} \left[y_i \ln(p_i) + (1-y_i) \ln(1-p_i)\right]
-\]
-where \( p_i = \sigma(\beta_0 + \beta^\top x_i) \).
+$`\mathcal{L}\left(\beta_{0}, \beta\right) = -\sum_{i=1}^{N} \left[y_i \ln(p_i) + (1-y_i) \ln(1-p_i)\right]`$
+
+where $$\( p_i = \sigma(\beta_0 + \beta^\top x_i) \).
 
 ### B.2 Gradient Derivations
-The gradient of \( \mathcal{L} \) with respect to \( (\beta_0, \beta) \) is:
-\[
-\frac{\partial \mathcal{L}}{\partial \beta_0} = \sum_{i=1}^{N} (p_i - y_i)
-\]
-\[
-\frac{\partial \mathcal{L}}{\partial \beta} = \sum_{i=1}^{N} (p_i - y_i)x_i
-\]
+The gradient of $$\( \mathcal{L} \) with respect to \( (\beta_0, \beta) \) is:
+$`\frac{\partial \mathcal{L}}{\partial \beta_0} = \sum_{i=1}^{N} (p_i - y_i)`$
+
+$`\frac{\partial \mathcal{L}}{\partial \beta} = \sum_{i=1}^{N} (p_i - y_i)x_i`$
 
 ### B.3 Regularization Terms
-1. **L2 Penalty:** \( \lambda \|\beta\|_2^2 \).  
-2. **L1 Penalty:** \( \lambda \|\beta\|_1 \).  
+1. **L2 Penalty:** $`\lambda \|\beta\|_2^2`$.  
+2. **L1 Penalty:** $`\lambda \|\beta\|_1`$.  
 
 Incorporating these penalties alters the objective function’s shape, encouraging sparsity for L1 or smoothness for L2 regularization.
 
@@ -79,16 +75,15 @@ Incorporating these penalties alters the objective function’s shape, encouragi
 - Split data into 70% training and 30% test sets.
 
 ### C.2 Algorithm Implementations
-1. **PSO:** Define particles representing \( (\beta_0, \beta_1, ..., \beta_d) \), with inertia weight and cognitive/social constants tuned for convergence.
+1. **PSO:** Define particles representing $`(\beta_0, \beta_1, ..., \beta_d)`$, with inertia weight and cognitive/social constants tuned for convergence.
 2. **GA:** Use chromosomes for solutions, implementing selection, crossover, and mutation with controlled rates.
 3. **SA:** Start with a high temperature and gradually cool using a predefined schedule.
 
 ### C.3 Objective Function and Regularization
 Objective function:
-\[
-\mathcal{L}_{\text{reg}} = \mathcal{L}\left(\beta_0, \beta\right) + \lambda R(\beta)
-\]
-where \( R(\beta) \) is either L1 or L2 penalty.
+$`\mathcal{L}_{\text{reg}} = \mathcal{L}\left(\beta_0, \beta\right) + \lambda R(\beta)`$
+
+where R $(\beta)$ is either L1 or L2 penalty.
 
 ### C.4 Hyperparameter Tuning
 - PSO: Tune inertia weight and social constants.
@@ -111,7 +106,7 @@ Analyze speed of convergence and identify signs of premature convergence for eac
 Evaluate the impact of key hyperparameters on performance metrics and optimization behavior.
 
 ### D.3 Model Interpretability
-Report final weights \( (\beta_0, ..., \beta_d) \), highlighting important features influenced by regularization type.
+Report final weights $`(\beta_0, ..., \beta_d)`$, highlighting important features influenced by regularization type.
 
 ### D.4 Recommendations
 Provide practical advice on selecting algorithms based on computational constraints or feature space dimensionality.
@@ -149,3 +144,15 @@ Convergence curves, performance metrics tables, and additional visualizations.
 - Collaboration allowed for idea exchange; code/write-ups must be individual.
 - Test algorithms on smaller datasets before scaling up.
 - Demonstrate experiments with both L1 and L2 regularization.
+
+---
+---
+
+The solution to given questions is in [submission](https://github.com/VedantJoshi-2024/ODSM_Assignment_2/tree/main/submission) directory.
+
+The **submission** directory includes
+- [Part_A](https://github.com/VedantJoshi-2024/ODSM_Assignment_2/tree/main/submission/Part_A)
+- [Part_B](https://github.com/VedantJoshi-2024/ODSM_Assignment_2/tree/main/submission/Part_B)
+- [Part_C](https://github.com/VedantJoshi-2024/ODSM_Assignment_2/tree/main/submission/Part_C)
+- [Part_D](https://github.com/VedantJoshi-2024/ODSM_Assignment_2/tree/main/submission/Part_D)
+- [ODSM_Assignment Report](https://github.com/VedantJoshi-2024/ODSM_Assignment_2/tree/main/submission/ODSM_Assignment_Report.pdf)
